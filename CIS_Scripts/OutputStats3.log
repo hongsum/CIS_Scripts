@@ -1,0 +1,706 @@
+Starting CIS Red Hat Enterprise Linux 7 Benchmark V1.0.0 Hardening Check....
+
+1.1.1 Create Separate Partition for /tmp (Scored): Pass
+
+1.1.2 Set nodev option for /tmp Partition (Scored): Pass
+
+1.1.3 Set nosuid option for /tmp Partition (Scored): Pass
+
+1.1.4 Set noexec option for /tmp Partition (Scored): Pass
+
+1.1.5 Create Separate Partition for /var (Scored): Pass
+
+1.1.6 Bind Mount the /var/tmp directory to /tmp (Scored): Fail
+
+1.1.7 Create Separate Partition for /var/log (Scored): Fail
+
+1.1.8 Create Separate Partition for /var/log/audit (Scored): Fail
+
+1.1.9 Create Separate Partition for /home (Scored): Pass
+
+1.1.10 Add nodev Option to /home (Scored): Pass
+
+Is there any removable media partition in this server[Y/N]?
+1.1.11 Add nodev Option to Removable Media Partitions (Not Scored): Fail
+1.1.12 Add noexec Option to Removable Media Partitions (Not Scored): Fail
+1.1.13 Add nosuid Option to Removable Media Partitions (Not Scored): Fail
+
+1.1.14 Add nodev Option to /dev/shm Partition (Scored): Pass
+
+1.1.15 Add nosuid Option to /dev/shm Partition (Scored): Pass
+
+1.1.16 Add noexec Option to /dev/shm Partition (Scored): Pass
+
+1.1.17 Set Sticky Bit on All World-Writable Directories (Scored) : Command Executed
+
+1.1.18 Disable Mounting of cramfs Filesystems (Not Scored): Pass
+
+1.1.19 Disable Mounting of freevxfs Filesystems (Not Scored): Pass
+
+1.1.20 Disable Mounting of jffs2 Filesystems (Not Scored): Pass
+
+1.1.21 Disable Mounting of hfs Filesystems (Not Scored): Pass
+
+1.1.22 Disable Mounting of hfsplus Filesystems (Not Scored): Pass
+
+1.1.23 Disable Mounting of squashfs Filesystems (Not Scored): Pass
+
+1.1.24 Disable Mounting of udf Filesystems (Not Scored): Pass
+
+Loaded plugins: product-id, search-disabled-repos, subscription-manager
+Security: kernel-3.10.0-862.6.3.el7.x86_64 is an installed security update
+Security: kernel-3.10.0-862.el7.x86_64 is the currently running version
+1.2.1 Configure Connection to the RHN RPM Repositories (Not Scored): Command Executed
+Verify to check if the system is registered
+
+gpg(Red Hat, Inc. (release key 2) <security@redhat.com>)
+gpg(Red Hat, Inc. (auxiliary key) <security@redhat.com>)
+1.2.2 Verify Red Hat GPG Key is Installed (Scored): Pass
+
+1.2.3 Verify that gpgcheck is Globally Activated (Scored): Pass
+
+rhnsd.service is not a native service, redirecting to /sbin/chkconfig.
+Executing /sbin/chkconfig rhnsd --level=5
+1.2.4 Disable the rhnsd Daemon (Not Scored): Pass
+
+Loaded plugins: product-id, search-disabled-repos, subscription-manager
+Security: kernel-3.10.0-862.6.3.el7.x86_64 is an installed security update
+Security: kernel-3.10.0-862.el7.x86_64 is the currently running version
+1.2.5 Obtain Software Package Updates with yum (Not Scored): Command Executed
+Determine if there are any packages that needs to be updated
+
+.M.......  g /var/log/lastlog
+.M.......  g /boot/initramfs-3.10.0-862.el7.x86_64.img
+.M.......  g /boot/initramfs-3.10.0-862.6.3.el7.x86_64.img
+.M.......  g /etc/pki/ca-trust/extracted/java/cacerts
+.M.......  g /etc/pki/ca-trust/extracted/openssl/ca-bundle.trust.crt
+.M.......  g /etc/pki/ca-trust/extracted/pem/email-ca-bundle.pem
+.M.......  g /etc/pki/ca-trust/extracted/pem/objsign-ca-bundle.pem
+.M.......  g /etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem
+.......T.    /etc/profile.d/which2.sh
+.......T.    /etc/profile.d/less.sh
+.M.......  g /etc/yum.repos.d/redhat.repo
+.M.......  g /etc/udev/hwdb.bin
+S.5....T.    /usr/lib/systemd/system/emergency.service
+S.5....T.    /usr/lib/systemd/system/rescue.service
+.M.......  g /var/lib/systemd/random-seed
+.M.......  g /var/log/wtmp
+.......T.    /etc/profile.d/256term.sh
+.......T.    /etc/profile.d/lang.sh
+.M.......  g /var/log/dmesg
+.M.......  g /var/log/dmesg.old
+.M.......  g /var/log/wtmp
+.M.......    /etc/cron.daily
+.M.......    /etc/cron.hourly
+.M.......    /etc/cron.monthly
+.M.......    /etc/cron.weekly
+.M.......    /etc/cron.d
+missing     /var/run/wpa_supplicant
+.M.......  g /var/log/lastlog
+If any output shows up, you may have an integrity issue with that package
+1.2.6 Verify Package Integrity Using RPM (Not Scored): Fail
+
+1.3.1 Install AIDE (Scored): Pass
+
+grep: /etc/grub.conf: No such file or directory
+grep: /etc/grub.conf: No such file or directory
+1.4.1 Enable SELinux in /etc/grub.conf (Scored): Pass
+
+1.4.2 Set the SELinux State (Scored): Fail
+
+1.4.3 Set the SELinux Policy (Scored): Fail
+
+package setroubleshoot is not installed
+1.4.4 Remove SETroubleshoot (Scored): Pass
+
+package mcstrans is not installed
+1.4.5 Remove MCS Translation Service (mcstrans) (Scored): Pass
+
+1.4.6 Check for Unconfined Daemons (Scored): Pass
+
+1.5.1 Set User/Group Owner on /boot/grub2/grub.cfg (Scored): Pass
+
+1.5.2 Set Permissions on /etc/grub.conf (Scored): Pass
+
+1.5.3 Set Boot Loader Password (Scored): Command Executed
+
+1.6.1 Restrict Core Dumps (Scored): Fail
+
+1.6.1 Enable Randomized Virtual Memory Region Placement (Scored): Pass
+
+1.7 Use the Latest OS Release (Not Scored): Command Executed
+Red Hat Enterprise Linux Server release 7.5 (Maipo)
+2.1.1 Remove telnet-server (Scored): Pass
+
+2.1.2 Remove telnet Clients (Scored): Pass
+
+2.1.3 Remove rsh-server (Scored): Pass
+
+2.1.4 Remove rsh (Scored): Pass
+
+2.1.5 Remove NIS Client (Scored): Pass
+
+2.1.5 Remove NIS Client (Scored): Pass
+
+2.1.7 Remove tftp (Scored): Pass
+
+2.1.8 Remove tftp-server (Scored): Pass
+
+2.1.9 Remove talk (Scored): Pass
+
+2.1.10 Remove talk-server (Scored): Pass
+
+2.1.11 Remove xinetd (Scored): Pass
+
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+error reading information on service chargen-dgram: No such file or directory
+2.1.12 Disable chargen-dgram (Scored): Fail
+
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+error reading information on service chargen-stream: No such file or directory
+2.1.13 Disable chargen-stream (Scored): Fail
+
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+error reading information on service daytime-dgram: No such file or directory
+2.1.14 Disable daytime-dgram (Scored): Fail
+
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+error reading information on service daytime-stream: No such file or directory
+2.1.15 Disable daytime-stream (Scored): Fail
+
+2.1.16 Disable echo-dgram (Scored): Command Executed
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+error reading information on service echo-dgram: No such file or directory
+2.1.16 Disable echo-dgram (Scored): Fail
+
+2.1.17 Disable echo-stream (Scored): Command Executed
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+error reading information on service echo-stream: No such file or directory
+2.1.17 Disable echo-stream (Scored): Fail
+
+2.1.18 Disable tcpmux-server (Scored): Command Executed
+
+Note: This output shows SysV services only and does not include native
+      systemd services. SysV configuration data might be overridden by native
+      systemd configuration.
+
+      If you want to list systemd services use 'systemctl list-unit-files'.
+      To see services enabled on particular target use
+      'systemctl list-dependencies [target]'.
+
+error reading information on service tcpmux-server: No such file or directory
+2.1.18 Disable tcpmux-server (Scored): Fail
+
+3.1 Set Daemon umask (Scored): Fail
+
+3.2 Remove the X Window System (Scored): Fail
+
+Failed to get unit file state for avahi-daemon.service: No such file or directory
+3.3 Disable Avahi Server (Scored): Pass
+
+Failed to get unit file state for cups.service: No such file or directory
+3.4 Disable Print Server - CUPS (Not Scored): Pass
+
+3.5 Remove DHCP Server (Scored): Pass
+
+3.6 Configure Network Time Protocol (NTP) (Scored): Pass
+
+package openldap-servers is not installed
+3.7 Remove LDAP (Not Scored): Pass
+
+Failed to get unit file state for nfslock.service: No such file or directory
+3.8 Disable NFS and RPC (Not Scored): Fail
+
+3.9 Remove DNS Server (Not Scored): Pass
+
+3.10 Remove FTP Server (Not Scored): Pass
+
+3.11 Remove HTTP Server (Not Scored): Pass
+
+3.12 Remove Dovecot (IMAP and POP3 services) (Not Scored): Pass
+
+3.13 Remove Samba (Not Scored): Pass
+
+3.14 Remove HTTP Proxy Server (Not Scored): Pass
+
+3.15 Remove SNMP Server (Not Scored): Pass
+
+./RedHat7checkHardening.sh: line 1143: netstat: command not found
+3.16 Configure Mail Transfer Agent for Local-Only Mode (Scored): Fail
+
+4.1.1 Disable IP Forwarding (Scored): Pass
+
+4.1.2 Disable Send Packet Redirects (Scored): Pass
+
+4.2.1 Disable Source Routed Packet Acceptance (Scored): Pass
+
+4.2.2 Disable ICMP Redirect Acceptance (Scored): Pass
+
+4.2.3 Disable Secure ICMP Redirect Acceptance (Scored): Fail
+
+4.2.4 Log Suspicious Packets (Scored): Pass
+
+4.2.5 Enable Ignore Broadcast Requests (Scored): Pass
+
+4.2.6 Enable Bad Error Message Protection (Scored): Pass
+
+4.2.7 Enable RFC-recommended Source Route Validation (Scored): Pass
+
+4.2.8 Enable TCP SYN Cookies (Scored): Pass
+
+4.3.1 Deactivate Wireless Interfaces (Not Scored): Manual check wireless interfaces
+./RedHat7checkHardening.sh: line 1293: ifconfig: command not found
+
+4.4.1.1 Disable IPv6 Router Advertisements (Not Scored): Pass
+
+4.4.1.2 Disable IPv6 Redirect Acceptance (Not Scored): Fail
+
+4.4.2 Disable IPv6 (Not Scored): Fail
+
+4.5.1 Install TCP Wrappers (Not Scored): Pass
+
+
+4.5.3 Verify Permissions on /etc/hosts.allow (Scored): Pass
+
+4.5.4 Create /etc/hosts.deny (Not Scored): Fail
+
+4.5.5 Verify Permissions on /etc/hosts.deny (Scored): Pass
+
+4.6.1 Disable DCCP (Not Scored): Fail
+
+4.6.2 Disable SCTP (Not Scored): Fail
+
+4.6.3 Disable RDS (Not Scored): Fail
+
+4.6.4 Disable TIPC (Not Scored): Fail
+
+4.7 Enable firewalld (Scored): Pass
+
+5.1.1 Install the rsyslog package (Scored): Pass
+
+5.1.2 Activate the rsyslog Service (Scored): Pass
+
+5.1.3 Configure /etc/rsyslog.conf (Not Scored): Command Executed
+Ensure approriate logging is set
+total 1040
+drwx------. 2 root   root       22 Jul  4 13:32 aide
+drwxr-xr-x. 2 root   root      232 Jul  2 11:18 anaconda
+drwx------. 2 root   root       61 Jul  4 11:35 audit
+-rw-------. 1 root   root        0 Jul  4 12:13 boot.log
+-rw-------. 1 root   root    37792 Jul  4 12:13 boot.log-20180704
+-rw-------. 1 root   utmp        0 Jul  2 11:11 btmp
+drwxr-xr-x. 2 chrony chrony      6 Dec  5  2017 chrony
+-rw-------. 1 root   root     6445 Jul  5 14:01 cron
+-rw-------. 1 root   root        0 Jul  5 14:08 daemon.log
+-rw-r-----. 1 root   root   133486 Jul  3 14:21 dmesg
+-rw-r-----. 1 root   root   133154 Jul  3 11:06 dmesg.old
+-rw-r-----. 1 root   root      264 Jul  5 14:01 firewalld
+-rw-------. 1 root   root     1359 Jul  4 11:35 grubby
+-rw-r-----. 1 root   root      193 Jul  2 11:10 grubby_prune_debug
+-rw-------. 1 root   root        0 Jul  5 14:08 kern.log
+-rw-r-----. 1 root   root   292292 Jul  4 13:33 lastlog
+-rw-------. 1 root   root     1519 Jul  5 14:07 maillog
+-rw-------. 1 root   root   614106 Jul  5 14:08 messages
+drwxr-xr-x. 2 ntp    ntp         6 Oct 10  2017 ntpstats
+drwxr-xr-x. 2 root   root       43 Mar 14 22:47 rhsm
+-rw-------. 1 root   root    43209 Jul  5 14:08 secure
+-rw-------. 1 root   root        0 Jul  2 11:11 spooler
+-rw-------. 1 root   root        0 Jul  5 14:08 syslog
+-rw-------. 1 root   root        0 Jul  2 11:10 tallylog
+drwxr-xr-x. 2 root   root       23 Jul  2 11:58 tuned
+-rw-------. 1 root   root        0 Jul  5 14:08 unused.log
+-rw-r-----. 1 root   root     8905 Jul  4 11:36 vmware-vgauthsvc.log.0
+-rw-r-----. 1 root   root    15369 Jul  5 14:01 vmware-vmsvc.log
+-rw-r-----. 1 root   utmp     9216 Jul  3 14:21 wtmp
+-rw-------. 1 root   root     6654 Jul  4 13:33 yum.log
+
+5.1.4 Create and Set Permissions on rsyslog Log Files (Scored): Manual check the log files permission
+
+5.1.5 Configure rsyslog to Send Logs to a Remote Log Host (Scored): Command Executed
+Review the /etc/rsyslog.conf file and verify that logs are sent to a central host (where logfile.example.com is the name of your central log host).
+
+5.1.6 Accept Remote rsyslog Messages Only on Designated Log Hosts (Not Scored): Fail
+
+max_log_file = 100
+max_log_file_action = keep_logs
+5.2.1.1 Configure Audit Log Storage Size (Not Scored): Depends on maximum size required
+
+5.2.1.2 Disable System on Audit Log Full (Not Scored): Fail
+
+5.2.1.3 Keep All Auditing Information (Scored): Pass
+
+5.2.2 Enable auditd Service (Scored): Pass
+
+5.2.3 Enable Auditing for Processes That Start Prior to auditd (Scored): Command Executed
+Make sure each line that starts with linux has the audit=1 parameter set.
+### BEGIN /etc/grub.d/10_linux ###
+menuentry 'Red Hat Enterprise Linux Server (3.10.0-862.6.3.el7.x86_64) 7.5 (Maipo)' --class red --class gnu-linux --class gnu --class os --unrestricted $menuentry_id_option 'gnulinux-3.10.0-862.6.3.el7.x86_64-advanced-00739b52-d981-4ace-ad23-1a1047b3ea52' {
+	linux16 /vmlinuz-3.10.0-862.6.3.el7.x86_64 root=/dev/mapper/rhel-root ro audit=1 quiet
+menuentry 'Red Hat Enterprise Linux Server (3.10.0-862.el7.x86_64) 7.5 (Maipo)' --class red --class gnu-linux --class gnu --class os --unrestricted $menuentry_id_option 'gnulinux-3.10.0-862.el7.x86_64-advanced-00739b52-d981-4ace-ad23-1a1047b3ea52' {
+	linux16 /vmlinuz-3.10.0-862.el7.x86_64 root=/dev/mapper/rhel-root ro audit=1 quiet
+menuentry 'Red Hat Enterprise Linux Server (0-rescue-a67f973ec4f643c29305c41916f5a066) 7.5 (Maipo)' --class red --class gnu-linux --class gnu --class os --unrestricted $menuentry_id_option 'gnulinux-0-rescue-a67f973ec4f643c29305c41916f5a066-advanced-00739b52-d981-4ace-ad23-1a1047b3ea52' {
+	linux16 /vmlinuz-0-rescue-a67f973ec4f643c29305c41916f5a066 root=/dev/mapper/rhel-root ro audit=1 quiet
+### END /etc/grub.d/10_linux ###
+### BEGIN /etc/grub.d/20_linux_xen ###
+### END /etc/grub.d/20_linux_xen ###
+
+5.2.4 Record Events That Modify Date and Time Information (Scored): Command Executed
+Manual Check
+-a always,exit -F arch=b32 -S adjtimex -S settimeofday -S stime -k time-change 
+-a always,exit -F arch=b32 -S clock_settime -F a0=0x0 -k time-change
+-a always,exit -F arch=b32 -S clock_settime -k time-change 
+-a always,exit -F arch=b64 -S adjtimex -S settimeofday -k time-change 
+-a always,exit -F arch=b64 -S clock_settime -F a0=0x0 -k time-change
+-a always,exit -F arch=b64 -S clock_settime -k time-change 
+-w /etc/localtime -p wa -k time-change
+pkill: not a number: 1-HUP
+
+5.2.6 Record Events That Modify the System's Network Environment (Scored): Command Executed
+Manual Check
+-a always,exit -F arch=b32 -S sethostname -S setdomainname -k system-locale 
+-a always,exit -F arch=b64 -S sethostname -S setdomainname -k system-locale 
+-w /etc/hosts -p wa -k system-locale 
+-w /etc/issue.net -p wa -k system-locale 
+-w /etc/issue -p wa -k system-locale 
+-w /etc/sysconfig/network -p wa -k system-locale 
+-w /etc/sysconfig/network-scripts/ -p wa -k system-locale
+
+5.2.5 Record Events That Modify User/Group Information (Scored): Command Executed
+Manual Check
+-w /etc/group -p wa -k identity 
+-w /etc/gshadow -p wa -k identity
+-w /etc/passwd -p wa -k identity 
+-w /etc/security/opasswd -p wa -k identity
+-w /etc/shadow -p wa -k identity 
+
+5.2.7 Record Events That Modify the System's Mandatory Access Controls (Scored): Command Executed
+Manual Check
+-w /etc/selinux/ -p wa -k MAC-policy
+-w /etc/selinux/ -p wa -k MAC-policy 
+-w /usr/share/selinux/ -p wa -k MAC-policy
+
+5.2.8 Collect Login and Logout Events (Scored): Command Executed
+Manual Check
+-w /var/log/btmp -p wa -k logins
+-w /var/log/lastlog -p wa -k logins
+-w /var/log/lastlog -p wa -k logins 
+-w /var/log/tallylog -p wa -k logins
+-w /var/log/wtmp -p wa -k logins 
+-w /var/run/faillock/ -p wa -k logins
+
+5.2.9 Collect Session Initiation Information (Scored): Command Executed
+Manual Check
+-w /var/log/btmp -p wa -k session
+-w /var/log/wtmp -p wa -k session
+-w /var/run/utmp -p wa -k session
+-w /var/run/utmp -p wa -k session 
+
+5.2.10 Collect Discretionary Access Control Permission Modification Events (Scored): Command Executed
+Manual Check
+-a always,exit -F arch=b32 -S chmod -S fchmod -S fchmodat -F auid>=1000 -F auid!=4294967295 -k perm_mod 
+-a always,exit -F arch=b32 -S chown -S fchown -S fchownat -S lchown -F auid>=1000 -F auid!=4294967295 -k perm_mod 
+-a always,exit -F arch=b32 -S setxattr -S lsetxattr -S fsetxattr -S removexattr -S lremovexattr -S fremovexattr -F auid>=1000 -F auid!=4294967295 -k perm_mod
+-a always,exit -F arch=b64 -S chmod -S fchmod -S fchmodat -F auid>=1000 -F auid!=4294967295 -k perm_mod 
+-a always,exit -F arch=b64 -S chown -S fchown -S fchownat -S lchown -F auid>=1000 -F auid!=4294967295 -k perm_mod 
+-a always,exit -F arch=b64 -S setxattr -S lsetxattr -S fsetxattr -S removexattr -S lremovexattr -S fremovexattr -F auid>=1000 -F auid!=4294967295 -k perm_mod 
+
+5.2.11 Collect Unsuccessful Unauthorized Access Attempts to Files (Scored): Command Executed
+Manual Check
+-a always,exit -F arch=b32 -S creat -S open -S openat -S truncate -S ftruncate -F exit=-EACCES -F auid>=1000 -F auid!=4294967295 -k access 
+-a always,exit -F arch=b32 -S creat -S open -S openat -S truncate -S ftruncate -F exit=-EPERM -F auid>=1000 -F auid!=4294967295 -k access
+-a always,exit -F arch=b64 -S creat -S open -S openat -S truncate -S ftruncate -F exit=-EACCES -F auid>=1000 -F auid!=4294967295 -k access 
+-a always,exit -F arch=b64 -S creat -S open -S openat -S truncate -S ftruncate -F exit=-EPERM -F auid>=1000 -F auid!=4294967295 -k access 
+
+5.2.12 Collect Use of Privileged Commands (Scored): Command Executed
+Manual Check
+find: ‘PART’: No such file or directory
+awk: cmd. line:1: {print \ "-a always,exit -F path=" $1 " -F perm=x -F auid>=500 -F auid!=4294967295 \ -k privileged" }
+awk: cmd. line:1:        ^ backslash not last character on line
+awk: cmd. line:1: {print \ "-a always,exit -F path=" $1 " -F perm=x -F auid>=500 -F auid!=4294967295 \ -k privileged" }
+awk: cmd. line:1:        ^ syntax error
+
+5.2.13 Collect Successful File System Mounts (Scored): Command Executed
+Manual Check
+-a always,exit -F arch=b32 -S mount -F auid>=1000 -F auid!=4294967295 -k mounts
+-a always,exit -F arch=b64 -S mount -F auid>=1000 -F auid!=4294967295 -k mounts 
+
+5.2.14 Collect File Deletion Events by User (Scored): Command Executed
+Manual Check
+-a always,exit -F arch=b32 -S unlink -S unlinkat -S rename -S renameat -F auid>=1000 -F auid!=4294967295 -k delete
+-a always,exit -F arch=b64 -S init_module -S delete_module -k modules
+-a always,exit -F arch=b64 -S unlink -S unlinkat -S rename -S renameat -F auid>=1000 -F auid!=4294967295 -k delete 
+
+5.2.15 Collect Changes to System Administration Scope (sudoers) (Scored): Command Executed
+Manual Check
+-w /etc/sudoers.d/ -p wa -k scope
+-w /etc/sudoers -p wa -k scope 
+
+5.2.16 Collect System Administrator Actions (sudolog) (Scored): Command Executed
+Manual Check
+-w /etc/sudoers -p wa -k actions
+-w /var/log/sudo.log -p wa -k actions
+
+5.2.17 Collect Kernel Module Loading and Unloading (Scored): Command Executed
+Manual Check
+-a always,exit -F arch=b64 -S init_module -S delete_module -k modules
+-w /sbin/insmod -p x -k modules 
+-w /sbin/modprobe -p x -k modules 
+-w /sbin/rmmod -p x -k modules 
+-w /usr/sbin/insmod -p x -k modules
+-w /usr/sbin/modprobe -p x -k modules
+-w /usr/sbin/rmmod -p x -k modules
+
+5.2.18 Make the Audit Configuration Immutable (Scored): Pass
+
+5.2.18 Make the Audit Configuration Immutable (Scored): Fail
+
+6.1.1 Enable anacron Daemon (Scored): Pass
+
+6.1.2 Enable crond Daemon (Scored): Pass
+
+6.1.3 Set User/Group Owner and Permission on /etc/anacrontab (Scored): Pass
+
+6.1.4 Set User/Group Owner and Permission on /etc/crontab (Scored): Pass
+
+66.1.5 Set User/Group Owner and Permission on /etc/cron.hourly (Scored): Pass
+
+6.1.6 Set User/Group Owner and Permission on /etc/cron.daily (Scored): Pass
+
+6.1.7 Set User/Group Owner and Permission on /etc/cron.weekly (Scored): Pass
+
+6.1.8 Set User/Group Owner and Permission on /etc/cron.monthly (Scored): Pass
+
+6.1.9 Set User/Group Owner and Permission on /etc/cron.d (Scored): Pass
+
+6.1.10 Restrict at Daemon (Scored): Pass
+
+ls: cannot access /etc/cron.deny: No such file or directory
+ls: cannot access /etc/at.deny: No such file or directory
+6.1.11 Restrict at/cron to Authorized Users (Scored): Pass
+-rw-------. 1 root root 0 Jul  5 14:08 /etc/cron.allow
+-rw-------. 1 root root 0 Jul  5 14:08 /etc/at.allow
+
+6.2.1 Set SSH Protocol to 2 (Scored): Pass
+
+6.2.2 Set LogLevel to INFO (Scored): Pass
+
+6.2.3 Set Permissions on /etc/ssh/sshd_config (Scored): Pass
+
+6.2.4 Disable SSH X11 Forwarding (Scored): Pass
+
+6.2.5 Set SSH MaxAuthTries to 4 or Less (Scored): Pass
+
+6.2.6 Set SSH IgnoreRhosts to Yes (Scored): Pass
+
+6.2.6 Set SSH IgnoreRhosts to Yes (Scored): Pass
+
+6.2.8 Disable SSH Root Login (Scored): Pass
+
+6.2.9 Set SSH PermitEmptyPasswords to No (Scored): Pass
+
+6.2.10 Do Not Allow Users to Set Environment Options (Scored): Pass
+
+6.2.11 Use Only Approved Cipher in Counter Mode (Scored): Pass
+
+6.2.12 Set Idle Timeout Interval for User Login (Scored): Pass
+
+6.2.13 Limit Access via SSH (Scored): Command Executed
+
+6.2.14 Set SSH Banner (Scored): Pass
+
+6.3.1 Upgrade Password Hashing Algorithm to SHA-512 (Scored): Pass
+
+6.3.2 Set Password Creation Requirement Parameters Using pam_cracklib (Scored): Fail
+
+6.3.3 Set Lockout for Failed Password Attempts (Not Scored): Fail
+
+grep: /etc/pam.d/system_auth: No such file or directory
+6.3.4 Limit Password Reuse (Scored): Fail
+
+6.4 Restrict root Login to System Console (Not Scored): Command Executed
+Manual Check
+
+
+6.5 Restrict Access to the su Command (Scored): Command Executed
+Manual Check
+#auth		sufficient	pam_wheel.so trust use_uid
+#auth		required	pam_wheel.so use_uid
+wheel:x:10:hs
+
+7.1.1 Set Password Expiration Days (Scored): Command Executed
+Manual Check
+#	PASS_MAX_DAYS     90
+PASS_MAX_DAYS 90
+
+7.1.2 Set Password Change Minimum Number of Days (Scored): Command Executed
+Manual Check
+#	PASS_MIN_DAYS     7
+PASS_MIN_DAYS 7
+
+7.1.3 Set Password Expiring Warning Days (Scored): Command Executed
+Manual Check
+#	PASS_WARN_AGE	Number of days warning given before a password expires.
+PASS_WARN_AGE 7
+
+7.2 Disable System Accounts (Scored): Pass
+
+7.3 Set Default Group for root Account (Scored): Pass
+
+7.4 Set Default umask for Users (Scored): Fail
+
+7.5 Lock Inactive User Accounts (Scored): Fail
+
+8.1 Set Warning Banner for Standard Login Services (Scored): Command Executed
+Manual Check
+Ensure that the files exist and have the correct permissions
+-rw-r--r--. 1 root root 0 Jun  7  2013 /etc/motd
+/etc/issue
+/etc/issue.net
+
+8.2 Remove OS Information from Login Warning Banners (Scored): Command Executed
+Manual Check
+Check if OS information is set to be displayed in the system login banners
+Kernel \r on an \m
+
+8.3 Set GNOME Warning Banner (Not Scored): Command Executed
+./RedHat7checkHardening.sh: line 2328: gconftool-2: command not found
+
+9.1.1 Verify System File Permissions (Not Scored): Command Executed
+Manual Check
+9.1.2 Verify Permissions on /etc/passwd (Scored): Pass
+-rw-r--r--. 1 root root 924 Jul  4 13:33 /etc/passwd
+
+9.1.3 Verify Permissions on /etc/shadow (Scored): Pass
+----------. 1 root root 727 Jul  5 14:08 /etc/shadow
+
+9.1.4 Verify Permissions on /etc/gshadow (Scored): Pass
+----------. 1 root root 376 Jul  4 13:33 /etc/gshadow
+
+9.1.4 Verify Permissions on /etc/gshadow (Scored): Pass
+-rw-r--r--. 1 root root 474 Jul  4 13:33 /etc/group
+
+9.1.6 Verify User/Group Ownership on /etc/passwd (Scored): Command Executed
+-rw-r--r--. 1 root root 924 Jul  4 13:33 /etc/passwd
+
+9.1.7 Verify User/Group Ownership on /etc/shadow (Scored): Command Executed
+----------. 1 root root 727 Jul  5 14:08 /etc/shadow
+
+9.1.7 Verify User/Group Ownership on /etc/shadow (Scored): Command Executed
+----------. 1 root root 376 Jul  4 13:33 /etc/gshadow
+
+9.1.9 Verify User/Group Ownership on /etc/group (Scored): Command Executed
+-rw-r--r--. 1 root root 474 Jul  4 13:33 /etc/group
+
+9.1.10 Find World Writable Files (Not Scored): Command Executed
+
+9.1.11 Find Un-owned Files and Directories (Scored): Command Executed
+
+9.1.12 Find Un-grouped Files and Directories (Scored): Command Executed
+
+9.1.13 Find SUID System Executables (Not Scored): Command Executed
+Identify and review such programs to ensure they are legitimate
+/usr/bin/fusermount
+/usr/bin/chfn
+/usr/bin/chsh
+/usr/bin/passwd
+/usr/bin/chage
+/usr/bin/gpasswd
+/usr/bin/newgrp
+/usr/bin/mount
+/usr/bin/su
+/usr/bin/umount
+/usr/bin/crontab
+/usr/bin/sudo
+/usr/bin/pkexec
+/usr/sbin/unix_chkpwd
+/usr/sbin/pam_timestamp_check
+/usr/sbin/usernetctl
+/usr/sbin/userhelper
+/usr/lib/polkit-1/polkit-agent-helper-1
+/usr/libexec/dbus-1/dbus-daemon-launch-helper
+
+9.1.14 Find SGID System Executables (Not Scored): Command Executed
+Review the files and check to see if system binaries have a different md5 checksum than what from the package
+
+9.2.1 Ensure Password Fields are Not Empty (Scored): Pass
+
+9.2.2 Verify No Legacy + Entries Exist in /etc/passwd File (Scored): Pass
+
+9.2.3 Verify No Legacy + Entries Exist in /etc/shadow File (Scored): Pass
+
+9.2.4 Verify No Legacy + Entries Exist in /etc/group File (Scored): Pass
+
+9.2.5 Verify No UID 0 Accounts Exist Other Than root (Scored): Pass
+
+9.2.6 Ensure root PATH Integrity (Scored): Command Executed
+./RedHat7checkHardening.sh: line 2564: bin/grep: No such file or directory
+/home/hs/.local/bin is not a directory
+/home/hs/bin is not a directory
+
+9.2.7 Check Permissions on User Home Directories (Scored): Command Executed
+./RedHat7checkHardening.sh: line 2599:  /bin/awk: No such file or directory
+
+9.2.8 Check User Dot File Permissions (Scored): Command Executed
+
+9.2.9 Check Permissions on User .netrc Files (Scored): Command Executed
+./RedHat7checkHardening.sh: line 2650:  /bin/awk: No such file or directory
+
+9.2.10 Check for Presence of User .rhosts Files (Scored): Command Executed
+./RedHat7checkHardening.sh: line 2690:  /bin/awk: No such file or directory
+9.2.11 Check Groups in /etc/passwd (Scored): Command Executed
+
+9.2.12 Check That Users Are Assigned Valid Home Directories (Scored): Command Executed
+
+9.2.13 Check User Home Directory Ownership (Scored): Command Executed
+
+9.2.14 Check for Duplicate UIDs (Scored): Command Executed
+
+Done!
